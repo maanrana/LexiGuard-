@@ -1,0 +1,6 @@
+{
+  "name": "LexiGuard",
+  "description": "Enterprise-grade AI Contract Analysis & Risk Intelligence SaaS helping startups, agencies, and SMBs identify hidden risks and draft bulletproof agreements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

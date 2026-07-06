@@ -1,0 +1,136 @@
+{
+  "users": [
+    {
+      "id": "usr_demo_1",
+      "email": "amanullahrana446@gmail.com",
+      "name": "Amanullah Rana",
+      "passwordHash": "240be518fabd2724ddb6f04eeb1da5967448d7e831c08c8fa822809f74c720a9",
+      "role": "admin",
+      "createdAt": "2026-07-06T21:53:33.029Z",
+      "subscription": {
+        "plan": "growth",
+        "status": "active",
+        "currentPeriodEnd": "2026-08-05T21:53:33.029Z"
+      }
+    }
+  ],
+  "contracts": [
+    {
+      "id": "con_demo_1",
+      "userId": "usr_demo_1",
+      "title": "Mutual Non-Disclosure Agreement",
+      "fileName": "mutual_nda_draft_v2.txt",
+      "fileSize": "4.2 KB",
+      "fileType": "text/plain",
+      "rawContent": "MUTUAL NON-DISCLOSURE AGREEMENT\n\nThis Mutual Non-Disclosure Agreement (\"Agreement\") is entered into on July 1, 2026, by and between:\nSaaSify Inc. (\"Disclosing Party\") and LexiGuard Corp (\"Receiving Party\").\n\n1. Confidential Information. The parties wish to explore a business relationship. In connection with this, either party may disclose proprietary technical or business information.\n\n2. Term and Termination. This Agreement shall govern all disclosures for a period of two (2) years. However, the obligations of confidentiality and non-use with respect to all Confidential Information disclosed under this Agreement shall survive termination and remain in effect indefinitely.\n\n3. Jurisdiction and Governing Law. This Agreement shall be governed by, and construed in accordance with, the laws of the State of Delaware, without giving effect to any principles of conflicts of law. Any legal suit, action or proceeding arising out of or related to this Agreement shall be instituted in the state or federal courts located in Wilmington, Delaware.\n\n4. Limitation of Liability. IN NO EVENT SHALL THE DISCLOSING PARTY BE LIABLE TO THE RECEIVING PARTY FOR ANY INDIRECT, SPECIAL, INCIDENTAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES ARISING OUT OF THIS AGREEMENT. THE RECEIVING PARTY'S MAXIMUM AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL BE STRICTLY LIMITED TO $100.",
+      "riskScore": 68,
+      "summary": "A standard Mutual Non-Disclosure Agreement with unbalanced liability protection and overly broad survival obligations on confidentiality.",
+      "complianceRating": "Needs Review",
+      "risks": [
+        {
+          "id": "r_1",
+          "category": "Limitation of Liability",
+          "severity": "high",
+          "clauseText": "THE RECEIVING PARTY'S MAXIMUM AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL BE STRICTLY LIMITED TO $100.",
+          "description": "Unilateral liability cap set at a ridiculously low amount ($100). If a data breach or intellectual property leak occurs due to the Receiving Party's negligence, damages are effectively unrecoverable.",
+          "suggestion": "Remove the low $100 cap or negotiate a cap that is tied to actual damages, insurance coverage, or a specific fair multiple (e.g., $100,000 or 12 months of fees)."
+        },
+        {
+          "id": "r_2",
+          "category": "Confidentiality Survival Term",
+          "severity": "medium",
+          "clauseText": "obligations of confidentiality and non-use ... shall survive termination and remain in effect indefinitely.",
+          "description": "An indefinite survival period for standard commercial NDAs is highly unfavourable. Trade secrets can be kept indefinitely, but typical proprietary information should have a finite survival term (e.g., 3-5 years).",
+          "suggestion": "Change the indefinite term to 3 or 5 years post-termination, with an exception carved out for trade secrets which remain confidential as long as they qualify as such under applicable law."
+        }
+      ],
+      "missingClauses": [
+        {
+          "id": "m_1",
+          "name": "Standard IP Carve-out / Protection",
+          "importance": "medium",
+          "description": "The agreement lacks a robust clause stating clearly that no license or transfer of intellectual property rights is granted or implied by sharing confidential information.",
+          "suggestion": "Add a standard reservation of intellectual property rights clause to safeguard SaaSify's product assets."
+        },
+        {
+          "id": "m_2",
+          "name": "Permitted Disclosures (Legal Compulsion)",
+          "importance": "medium",
+          "description": "There is no exception for compelled disclosures by law, subpoena, or government authority.",
+          "suggestion": "Insert a standard compelled disclosure clause allowing sharing if requested by a court order, provided prior notice is given to the other party."
+        }
+      ],
+      "comments": [
+        {
+          "id": "cmt_1",
+          "authorName": "Amanullah Rana",
+          "authorEmail": "amanullahrana446@gmail.com",
+          "text": "We should flag this liability clause during our negotiations next Tuesday.",
+          "createdAt": "2026-07-06T21:53:33.029Z"
+        }
+      ],
+      "createdAt": "2026-07-04T21:53:33.029Z"
+    },
+    {
+      "id": "con_demo_2",
+      "userId": "usr_demo_1",
+      "title": "Freelance Software Development Agreement",
+      "fileName": "freelance_dev_agreement_jul2026.txt",
+      "fileSize": "6.8 KB",
+      "fileType": "text/plain",
+      "rawContent": "FREELANCE DEVELOPMENT AGREEMENT\n\nThis Agreement is made between PixelCraft Studio (\"Client\") and Alex Miller (\"Contractor\").\n\n1. Services. Contractor agrees to design and develop the LexiGuard Web App as specified in Exhibit A.\n2. Payment. Client shall pay Contractor $5,000 upon successful completion and delivery. No deposit or milestone payments are specified.\n3. Intellectual Property. All work product developed by Contractor shall remain the exclusive intellectual property of the Contractor until full and final payment of $5,000 is received. Upon full payment, intellectual property rights transfer to the Client.\n4. Termination. Either party may terminate this agreement at any time with or without cause by giving forty-eight (48) hours notice.",
+      "riskScore": 82,
+      "summary": "Freelance Agreement ensuring standard contractor payment and IP transfer rules. Main points of interest are the lack of payment milestones and a very short termination notice.",
+      "complianceRating": "Good",
+      "risks": [
+        {
+          "id": "r_3",
+          "category": "Payment Terms",
+          "severity": "medium",
+          "clauseText": "Client shall pay Contractor $5,000 upon successful completion and delivery. No deposit or milestone payments are specified.",
+          "description": "Paying 100% on delivery leaves the contractor vulnerable to cash-flow delays, and leaves the client with zero leverage for course-correction if the work is unsatisfactory.",
+          "suggestion": "Structure payments in milestones (e.g., 30% upfront deposit, 40% on Beta, 30% on Final release) to align incentives."
+        },
+        {
+          "id": "r_4",
+          "category": "Termination Notice Period",
+          "severity": "medium",
+          "clauseText": "Either party may terminate this agreement at any time with or without cause by giving forty-eight (48) hours notice.",
+          "description": "A 48-hour termination notice without cause is extremely abrupt. A project can be cancelled mid-way, leaving the developer or client stranded on short notice.",
+          "suggestion": "Increase the notice period to 15 or 30 days, or add a 'kill fee' to compensate the contractor for work done if terminated by the client without cause."
+        }
+      ],
+      "missingClauses": [
+        {
+          "id": "m_3",
+          "name": "Warranty and Acceptance Period",
+          "importance": "high",
+          "description": "The agreement does not define what constitutes 'successful completion' or outline a testing/acceptance period (e.g., 10 days) for the client to verify quality.",
+          "suggestion": "Include a 14-day Acceptance Testing Clause specifying criteria for rejection and remediation of bugs."
+        }
+      ],
+      "comments": [],
+      "createdAt": "2026-07-05T21:53:33.029Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "log_1",
+      "userId": "usr_demo_1",
+      "userEmail": "amanullahrana446@gmail.com",
+      "action": "WORKSPACE_INIT",
+      "details": "LexiGuard Secure Workspace initialized successfully for Growth Plan.",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-07-04T21:53:33.029Z"
+    },
+    {
+      "id": "log_2",
+      "userId": "usr_demo_1",
+      "userEmail": "amanullahrana446@gmail.com",
+      "action": "CONTRACT_UPLOAD",
+      "details": "Uploaded and processed mutual_nda_draft_v2.txt. Risk Score: 68/100",
+      "ip": "127.0.0.1",
+      "timestamp": "2026-07-05T00:17:33.030Z"
+    }
+  ]
+}
